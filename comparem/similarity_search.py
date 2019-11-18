@@ -96,7 +96,7 @@ class SimilaritySearch(object):
            os.system("LC_ALL=C gsort --parallel=8 -o %s -k1,1 -k3,3 %s" % (input_hit_table, input_hit_table))
         else:
            os.system("LC_ALL=C sed -i 's/~/\t/g' %s" % input_hit_table)
-           os.system("LC_ALL=C sort --parallel=8 -o %s -k1,1 -k3,3 %s" % (input_hit_table, input_hit_table))
+           os.system("LC_ALL=C sort -o %s -k1,1 -k3,3 %s" % (input_hit_table, input_hit_table))
 
         os.system('mv %s %s' % (input_hit_table, output_hit_table))
      
